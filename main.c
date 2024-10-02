@@ -24,7 +24,7 @@ HANDLE GetProcessHandleFromName(const char* processName)
 	printf("Searching Process: %s\n", processName);
 	HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
 	PROCESSENTRY32 process;
-	ZeroMemory(&process, sizeof(process));
+ 	ZeroMemory(&process, sizeof(process));
 	process.dwSize = sizeof(process);
 	if(Process32First(snapshot, &process))
 	{
